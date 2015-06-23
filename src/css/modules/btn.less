@@ -1,0 +1,53 @@
+@import "~css/vars";
+@import "~css/mixins/transitions";
+
+.btn  {
+    color: @color-yellow;
+
+    &:hover {
+        background-color: @color-white;
+        color: @color-blue;
+        text-decoration: none;
+    }
+}
+
+.bg-blue .btn:hover {
+    color: @color-blue;
+
+    h4 {
+        color: @color-blue;        
+    }
+}
+
+.btn-primary {
+
+    color: @color-white;
+
+    .box.box-white & {
+        background-color: @color-blue;
+        border: none;
+        color: @color-white;
+
+        &:hover {
+            background-color: @color-blue-dark;
+        }
+    }
+}
+
+.btn-block {
+    
+    .box.box-white & {
+        color: @color-blue;
+        background-color: transparent;
+        .transition(background-color);
+
+        &:hover {
+            background-color: @color-yellow;            
+        }
+
+        svg {
+            .to-rem(height, @spacing-double);
+        }
+
+    }
+}

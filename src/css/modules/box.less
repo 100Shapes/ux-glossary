@@ -1,0 +1,32 @@
+@import "~css/vars";
+
+.box {
+    .no-touch & a:hover {
+        text-decoration: none;
+    }
+
+    .form-label {
+        color: @color-white;
+    }
+
+    .form-input {
+        background-color: @color-blue;
+        color: @color-white;
+    }
+
+    p {
+        color: @color-white;
+    }
+}
+
+.box.box-white {
+    background-color: @color-white;
+
+    &.box-border {
+        border: 1px solid @color-gray;
+    }
+
+    h4, p {
+        color: @color-blue;
+    }
+}

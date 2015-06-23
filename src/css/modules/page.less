@@ -1,0 +1,49 @@
+.bg-blue {
+    background-color: @color-blue;
+
+    h1, h2, h4, h5, p, li {
+        color: @color-white;
+    }
+
+    a {
+        color: @color-yellow;
+    }
+
+    & .box-white {
+        h1, h2, h5, p, li {
+            color: @color-blue;
+        }    
+    }
+}
+
+.bg-yellow {
+    background-color: @color-yellow;
+
+    h1, h2, p, a, li {
+        color: @color-white;    
+    }
+}
+
+.bg-orange {
+    background-color: @color-orange;
+
+    h1, h2, p, a, li {
+        color: @color-white;    
+    }    
+}
+
+.bg-orange--fade {
+    background-color: fade(@color-orange, 90%);
+}
+
+
+.ui-match {
+    color: @color-yellow;
+    white-space: nowrap;
+}
+
+.profile {
+    .to-rem(width, @spacing-double);
+    .to-rem(border-radius, @spacing-double/2);
+}
+
