@@ -3,7 +3,8 @@
 <ol>
     <li ng-repeat="term in vm.terms track by term.slug">
         <a href
-           ui-sref="main.glossary.term({ slug:term.slug })">{{ term.slug }}
+           ui-sref="main.glossary.term({ termId:term.id })">
+           {{ term.slug }} – {{ term.id }}
         </a>
     </li>
 </ol>

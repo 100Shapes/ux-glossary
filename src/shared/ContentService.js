@@ -14,6 +14,10 @@ export default ngModule => {
                 return Prismic.documentTypes('blog-post').then(function(resp) {
                     return resp.results;
                 });
+            },
+
+            one(idString) {
+                return Prismic.document(idString);
             }
             
         };

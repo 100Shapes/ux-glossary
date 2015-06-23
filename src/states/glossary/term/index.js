@@ -5,9 +5,22 @@ export default ngModule => {
 
             $stateProvider
                 .state('main.glossary.term', {
-                    url: '/:slug',
+                    url: '/:termId',
                     controller: 'GlossaryTermCtrl as vm',
-                    template: require('./glossary.term.html')
+                    template: require('./glossary.term.html'),
+                    resolve: {
+
+                        ContentService: 'ContentService',
+
+                        termId: function($stateParams){
+                            return $stateParams.termId;
+                        },
+
+                        term: function(ContentService, termId) {
+                            return ContentService.one(termId);
+                        }
+
+                    }
                 });
             
         });
@@ -16,8 +29,10 @@ export default ngModule => {
 
     ngModule.controller('GlossaryTermCtrl', GlossaryTermCtrl);
 
-    function GlossaryTermCtrl() {
+    function GlossaryTermCtrl(term) {
         let vm = this;
+
+        vm.term = term;
     }
     
 }
