@@ -2,6 +2,8 @@
 const angular = require('angular');
 require('angular-ui-router');
 require('angular-animate');
+require('script!prismic.io');
+require('angular-prismicio');
 
 // Styles
 require('css/main.less');
@@ -9,7 +11,8 @@ require('css/main.less');
 
 const ngModule = angular.module('app', [
     'ui.router',
-    'ngAnimate'
+    'ngAnimate',
+    'prismic.io'
 ]);
 
 require('./config')(ngModule);

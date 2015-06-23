@@ -6,14 +6,14 @@ export default ngModule => {
 
     ////////
 
-    function ContentService() {
+    function ContentService(Prismic) {
 
         const contentService = {
 
             all() {
-                // return Prismic.documentTypes('blog-post').then(function(resp) {
-                //     return resp.results;
-                // });
+                return Prismic.documentTypes('blog-post').then(function(resp) {
+                    return resp.results;
+                });
             }
             
         };

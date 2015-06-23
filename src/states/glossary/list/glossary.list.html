@@ -1,0 +1,9 @@
+<h1>Glossary List</h1>
+
+<ol>
+    <li ng-repeat="term in vm.terms track by term.slug">
+        <a href
+           ui-sref="main.glossary.term({ slug:term.slug })">{{ term.slug }}
+        </a>
+    </li>
+</ol>

@@ -13,14 +13,14 @@ export default ngModule => {
         })
 
         // Configure Prismic
-        .config(function() {
-            // PrismicProvider.setApiEndpoint('https://lesbonneschoses.prismic.io/api');
-            // PrismicProvider.setAccessToken('');
-            // PrismicProvider.setClientId('');
-            // PrismicProvider.setClientSecret('');
-            // PrismicProvider.setLinkResolver(function(ctx, doc) {
-            //     return 'detail.html?id=' + doc.id + '&slug=' + doc.slug + ctx.maybeRefParam;
-            // });
+        .config(function(PrismicProvider) {
+            PrismicProvider.setApiEndpoint('https://lesbonneschoses.prismic.io/api');
+            PrismicProvider.setAccessToken('');
+            PrismicProvider.setClientId('');
+            PrismicProvider.setClientSecret('');
+            PrismicProvider.setLinkResolver(function(ctx, doc) {
+                return 'detail.html?id=' + doc.id + '&slug=' + doc.slug + ctx.maybeRefParam;
+            });
         })
         
         ;
