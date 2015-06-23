@@ -4,17 +4,19 @@
     </div>
 </header>
 
-<div class="wrapper wrapper-flush">
-    <div class="grid">
-        <div class="grid-item 1/1 m">
-            <input ng-model="vm.search.$"
-                   placeholder="search…"
-                   class="db p">
+<div class="box">
+    <div class="wrapper wrapper-flush">
+        <div class="grid">
+            <div class="grid-item 1/1">
+                <input ng-model="vm.search.$"
+                       placeholder="search…"
+                       class="db 1/1 p">
+            </div>
         </div>
     </div>
 </div>
 
-<div class="wrapper wrapper-flush mv+">
+<div class="wrapper wrapper-flush mv">
     <ol class="list-bare">
         <li ng-repeat="term in vm.terms | filter:vm.search">
             <ux-card term="term"
