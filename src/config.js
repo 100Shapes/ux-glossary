@@ -14,7 +14,7 @@ export default ngModule => {
 
         // Configure Prismic
         .config(function(PrismicProvider) {
-            PrismicProvider.setApiEndpoint('https://lesbonneschoses.prismic.io/api');
+            PrismicProvider.setApiEndpoint('https://ux-glossary.prismic.io/api');
             PrismicProvider.setAccessToken('');
             PrismicProvider.setClientId('');
             PrismicProvider.setClientSecret('');
