@@ -1,0 +1,13 @@
+<article class="ux-card box">
+    <h1 class="h2 mt0 mb-">
+        <a href
+           ui-sref="main.glossary.term({ termId:term.id })">
+            {{ ::term.fragments['term.term'].value[0].text }}
+        </a>
+    </h1>
+
+    <div prismic-html
+         fragment="::term.fragments['term.short_description']">
+    </div>
+    
+</article>
