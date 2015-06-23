@@ -52,6 +52,14 @@
 // Typography -> Font Sizes
 //
 
+@font-weight-regular: 300;
+@font-weight-regular: 400;
+@font-weight-medium: 500;
+
+//
+// Typography -> Font Sizes
+//
+
 // Typography -> Font Sizes -> Base
 
 @font-size: 19;
@@ -104,8 +112,9 @@
 //
 
 @font-family-sans-serif: "brandon-grotesque", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-@font-family-serif: Livory, Georgia, Cambria, "Times New Roman", Times, serif;
+@font-family-serif: "livory", Georgia, Cambria, "Times New Roman", Times, serif;
 @font-family-monospace: Monaco, Consolas, "Liberation Mono", Courier, monospace;
+
 
 //
 // Spacing -> Base
@@ -275,7 +284,7 @@
 @text-del-font-style: italic;
 @text-del-text-decoration: line-through;
 @text-del-text-color: @color-gray-dark;
-@text-dt-font-weight: 700;
+@text-dt-font-weight: @font-weight-medium;
 @text-dt-text-color: @color-gray-darkest;
 @text-highlights-bg-color: #ff9;
 @text-highlights-text-color: @color-gray-darkest;
@@ -285,7 +294,7 @@
 //
 
 @heading-font-family: @font-family-sans-serif;
-@heading-font-weight: 500;
+@heading-font-weight: @font-weight-medium;
 @heading-text-color: @color-black;
 
 
