@@ -4,11 +4,13 @@
     </div>
 </header>
 
-<ol>
-    <li ng-repeat="term in vm.terms track by term.slug">
-        <a href
-           ui-sref="main.glossary.term({ termId:term.id })">
-           {{ term.slug }}
-        </a>
-    </li>
-</ol>
+<div class="wrapper mv+">
+    <ol>
+        <li ng-repeat="term in vm.terms track by term.slug">
+            <a href
+               ui-sref="main.glossary.term({ termId:term.id })">
+               {{ term.slug }}
+            </a>
+        </li>
+    </ol>
+</div>
