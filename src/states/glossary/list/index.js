@@ -1,5 +1,7 @@
 export default ngModule => {
 
+    require('./glossary.list.less')
+
     ngModule
         .config($stateProvider => {
 
