@@ -8,12 +8,29 @@ export default ngModule => {
                     url: '/{letter:[a-z]}/',
                     views: {
                         "terms": {
-                            template: require('./glossary.list.letter.html')
+                            template: require('./glossary.list.letter.html'),
+                            controller: 'GlossaryListLetterCtrl as vm',
+                            resolve: {
+                                letter: function($stateParams){
+                                    return $stateParams.letter;
+                                }
+                            }
                         }
                     }
                 });
             
         });
+
+    /////////////
+
+    ngModule.controller('GlossaryListLetterCtrl', GlossaryListLetterCtrl)
+
+    function GlossaryListLetterCtrl(letter) {
+        let vm = this;
+
+        vm.letter = letter;
+
+    }
 
     
 }
