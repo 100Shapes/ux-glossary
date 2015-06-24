@@ -18,6 +18,7 @@ export default ngModule => {
     require('./list')(ngModule);
     require('./term')(ngModule);
     require('./ux-card')(ngModule);
+    require('./ux-letter-selector')(ngModule);
 
     
 }
