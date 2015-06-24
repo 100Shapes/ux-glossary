@@ -1,9 +1,3 @@
-<header class="tc pv bg--orange">
-    <div class="wrapper">
-        <h1>The UX Glossary</h1>
-    </div>
-</header>
-
 <div class="box">
     <div class="wrapper wrapper-flush">
         <div class="grid">
@@ -16,7 +10,9 @@
     </div>
 </div>
 
-<div class="wrapper wrapper-flush mv">
+<div ui-view="terms"></div>
+
+<!-- <div class="wrapper wrapper-flush mv">
     <ol class="list-bare">
         <li ng-repeat="term in vm.terms | filter:vm.search">
             <ux-card term="term"
@@ -25,3 +21,4 @@
         </li>
     </ol>
 </div>
+ -->

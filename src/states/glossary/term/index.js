@@ -5,7 +5,7 @@ export default ngModule => {
 
             $stateProvider
                 .state('main.glossary.term', {
-                    url: '/:termId',
+                    url: '/:letter/:termId',
                     controller: 'GlossaryTermCtrl as vm',
                     template: require('./glossary.term.html'),
                     resolve: {
