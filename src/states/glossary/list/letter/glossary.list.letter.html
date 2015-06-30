@@ -2,4 +2,10 @@
 
     <h1>{{ vm.letter | uppercase }}</h1>
 
+    <ol>
+        <li ng-repeat="term in ::vm.terms track by term.id">
+            {{ term.getText("term.term") }}
+        </li>
+    </ol>
+
 </div>

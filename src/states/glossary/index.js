@@ -20,5 +20,4 @@ export default ngModule => {
     require('./ux-card')(ngModule);
     require('./ux-letter-selector')(ngModule);
 
-    
 }

@@ -18,6 +18,15 @@ export default ngModule => {
 
             one(idString) {
                 return Prismic.document(idString);
+            },
+
+            forLetter(letter) {
+
+                return Prismic.query(`[[:d = any(document.tags, ["${letter.toUpperCase()}"])][:d = at(document.type, "${CONTENT_TYPE_TERM}")]]`).then(
+                    (resp) => {
+                        return resp.results;
+                    }
+                );
             }
             
         };

@@ -11,8 +11,13 @@ export default ngModule => {
                             template: require('./glossary.list.letter.html'),
                             controller: 'GlossaryListLetterCtrl as vm',
                             resolve: {
+
                                 letter: function($stateParams){
                                     return $stateParams.letter;
+                                },
+
+                                terms: function(letter, ContentService) {
+                                    return ContentService.forLetter(letter);
                                 }
                             }
                         }
@@ -25,10 +30,11 @@ export default ngModule => {
 
     ngModule.controller('GlossaryListLetterCtrl', GlossaryListLetterCtrl)
 
-    function GlossaryListLetterCtrl(letter) {
+    function GlossaryListLetterCtrl(letter, terms) {
         let vm = this;
 
         vm.letter = letter;
+        vm.terms = terms;
 
     }
 
