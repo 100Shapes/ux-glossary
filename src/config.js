@@ -19,7 +19,13 @@ export default ngModule => {
             PrismicProvider.setClientId('');
             PrismicProvider.setClientSecret('');
             PrismicProvider.setLinkResolver(function(ctx, doc) {
-                return `/#!/${doc.id}/`;
+
+                let letter = doc
+                    .getText("term.term")
+                    .charAt(0)
+                    .toLowerCase();
+
+                return `/#!/${letter}/${doc.id}/`;
             });
         })
         

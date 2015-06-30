@@ -33,6 +33,9 @@ export default ngModule => {
         let vm = this;
 
         vm.term = term;
+        vm.letter = term.getText("term.term")
+            .charAt(0)
+            .toLowerCase();
     }
     
 }

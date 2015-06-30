@@ -1,10 +1,9 @@
 <div class="wrapper">
-    <a href ui-sref="main.glossary.list">all terms</a>
+    <a href ui-sref="main.glossary.list.letter({ letter:vm.letter })">Back to {{ ::vm.letter | uppercase }}</a>
 
     <h1 class="h2">
-        {{ ::vm.term.fragments['term.term'].value[0].text }}
+        {{ ::vm.term.getText("term.term") }}
     </h1>
 
-    <div prismic-html
-         fragment="::vm.term.fragments['term.description']"></div>
+    <div prismic-html fragment="::vm.term.fragments['term.description']"></div>
 </div>

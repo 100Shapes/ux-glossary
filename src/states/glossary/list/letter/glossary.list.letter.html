@@ -4,7 +4,9 @@
 
     <ol>
         <li ng-repeat="term in ::vm.terms track by term.id">
-            {{ term.getText("term.term") }}
+            <a href ui-sref="main.glossary.term({ termId:term.id })">
+                {{ term.getText("term.term") }}
+            </a>
         </li>
     </ol>
 
